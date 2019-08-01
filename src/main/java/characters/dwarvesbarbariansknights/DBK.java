@@ -4,12 +4,12 @@ import characters.Player;
 
 public abstract class DBK extends Player {
 
-    private WeaponType weaponType;
+    public WeaponType weaponType;
 
     public DBK(String name, WeaponType weaponType) {
         super(name);
         this.weaponType = weaponType;
     }
 
-    public abstract int attack();
+    public abstract double attack();
 }

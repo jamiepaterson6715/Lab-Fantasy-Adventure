@@ -3,16 +3,16 @@ package characters.dwarvesbarbariansknights;
 public class Knight extends DBK {
 
     private double armourValue;
-    private int attackValue;
+    private double attackValue;
 
     public Knight(String name, WeaponType weaponType) {
         super(name, weaponType);
         this.armourValue = 0.6;
-        this.attackValue = 80;
+        this.attackValue = 1.2;
     }
 
-    public int attack() {
-        return this.attackValue;
+    public double attack() {
+        return this.attackValue * this.weaponType.getDamage();
     }
 
 }
