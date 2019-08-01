@@ -17,4 +17,6 @@ public enum WeaponType {
     public int getDamage() {
         return damage;
     }
+
+
 }

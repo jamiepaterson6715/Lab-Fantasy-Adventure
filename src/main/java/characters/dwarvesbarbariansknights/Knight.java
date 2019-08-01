@@ -15,5 +15,14 @@ public class Knight extends DBK {
         return this.attackValue * this.weaponType.getDamage();
     }
 
+    public double getArmourValue() {
+        return armourValue;
+    }
+
+    public double getAttackValue() {
+        return attackValue;
+    }
+
+
 }
 

@@ -13,10 +13,29 @@ public class KnightTest {
     public void setUp() {
         knight = new Knight("Bob", WeaponType.SWORD);
     }
-    @Test
 
+    @Test
+    public void canGetKnightName()  {
+        assertEquals("Bob", knight.getName());
+    }
+
+    @Test
+    public void canGetKnightWeaponDamage() {
+        assertEquals(45, knight.weaponType.getDamage());
+    }
+
+    @Test
     public void canGetWeaponDamage(){
         assertEquals(54, knight.attack(), 0.02);
     }
 
+    @Test
+    public void canGetArmourValue() {
+        assertEquals(0.6, knight.getArmourValue(), 0.01);
+    }
+
+    @Test
+    public void canGetAttackValue() {
+        assertEquals(1.2, knight.getAttackValue(), 0.01);
+    }
 }
