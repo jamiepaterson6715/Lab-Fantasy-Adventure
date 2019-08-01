@@ -12,7 +12,7 @@ public class Dwarf extends DBK{
     }
 
     public double attack() {
-        return this.attackValue * this.weaponType.getDamage();
+        return this.attackValue * this.getWeaponType().getDamage();
     }
 
     public double getArmourValue() {

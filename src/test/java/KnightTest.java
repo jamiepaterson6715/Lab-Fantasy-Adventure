@@ -21,7 +21,7 @@ public class KnightTest {
 
     @Test
     public void canGetKnightWeaponDamage() {
-        assertEquals(45, knight.weaponType.getDamage());
+        assertEquals(45, knight.getWeaponType().getDamage());
     }
 
     @Test

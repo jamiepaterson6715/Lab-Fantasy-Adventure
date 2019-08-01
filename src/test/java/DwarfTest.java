@@ -23,7 +23,7 @@ public class DwarfTest {
 
     @Test
     public void canGetdwarfWeaponDamage() {
-        assertEquals(54, dwarf.weaponType.getDamage());
+        assertEquals(54, dwarf.getWeaponType().getDamage());
     }
 
     @Test

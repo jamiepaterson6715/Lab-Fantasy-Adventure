@@ -22,7 +22,7 @@ public class BarbarianTest {
 
     @Test
     public void canGetBarbarianWeaponDamage() {
-        assertEquals(12, barbarian.weaponType.getDamage());
+        assertEquals(12, barbarian.getWeaponType().getDamage());
     }
 
     @Test
