@@ -21,5 +21,5 @@ public abstract class WW extends Player {
         return creatureType;
     }
 
-    public abstract void castSpell();
+    public abstract double castSpell();
 }
