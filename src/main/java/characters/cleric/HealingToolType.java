@@ -8,7 +8,7 @@ public enum HealingToolType {
 
     private final int healingPower;
 
-    HealingToolType(int healingPower, int stock) {
+    HealingToolType(int healingPower) {
         this.healingPower = healingPower;
     }
 

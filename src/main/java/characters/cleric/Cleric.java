@@ -21,19 +21,38 @@ public class Cleric extends Player {
         return 5;
     }
 
+
+    public HealingToolType getHealingToolType() {
+        return healingToolType;
+    }
+
+    public int getPotionStock() {
+        return potionStock;
+    }
+
+    public int getHolyWaterStock() {
+        return holyWaterStock;
+    }
+
+    public int getHerbStock() {
+        return herbStock;
+    }
+
     public void heal(Player player) {
         if (this.healingToolType == HealingToolType.HERBS) {
             if (this.herbStock > 0) {
                 player.setHealth(player.getHealth() + this.healingToolType.getHealingPower());
                 this.herbStock -= 1;
-            } else if (this.potionStock > 0) {
+            }
+        } else if (this.healingToolType == HealingToolType.POTION) {
+            if (this.potionStock > 0) {
                 player.setHealth(player.getHealth() + this.healingToolType.getHealingPower());
                 this.potionStock -= 1;
-            } else {
-                if (this.holyWaterStock > 0) {
-                    player.setHealth(player.getHealth() + this.healingToolType.getHealingPower());
-                    this.holyWaterStock -= 1;
-                }
+            }
+        } else {
+            if (this.holyWaterStock > 0) {
+                player.setHealth(player.getHealth() + this.healingToolType.getHealingPower());
+                this.holyWaterStock -= 1;
             }
         }
     }
